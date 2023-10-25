@@ -1,0 +1,98 @@
+body{
+    font-family: 'Gabarito', sans-serif;
+    color: var(--text);
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+      --text: #151519;
+      --background: #e3e4e8;
+      --sec_background: #dedfe2;
+      --primary: #c4c5cf;
+      --secondary: #cfd0d8;
+      --accent: #636579;
+    }
+  }
+@media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e6e6ea;
+      --background: #17181c;
+      --sec_background: #24262c;
+      --primary: #30313b;
+      --secondary: #272830;
+      --accent: #86889c;
+    }
+}
+
+
+.container{
+    width: 600px;
+    height: 90vh;
+    padding: 2rem 3rem;
+    background-color: var(--background);
+    border-radius: 50px;
+    border: 2px solid var(--accent);
+}
+
+.newTaskDiv{
+    position: relative;
+    width: 100%;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+.newTaskDiv form{
+    display: none;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+.clicked{
+    background-color: var(--sec_background);
+    cursor: pointer;
+    border: 2px dashed var(--accent);
+    height: 120px;
+}
+.clicked form{
+    display: block;
+}
+.clicked form input{
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    outline: none;
+    border: 1px solid var(--accent);
+    padding: 0 10px;
+}
+.taskList{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+@media screen and (max-width: 700px){
+    .container{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 500px){
+    .container{
+        width: 300px;
+    }
+}
